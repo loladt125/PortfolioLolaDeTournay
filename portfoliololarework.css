@@ -1,0 +1,837 @@
+html {
+    scroll-behavior: smooth; /*scroll smooth du menu vers les ancres*/
+}
+body{
+    background-color: #E2DABA;
+    overflow-x: hidden; /* Désactive le scroll horizontal */
+    overflow-y: auto;   /* Active uniquement le scroll vertical */
+    font-family: Unna;
+} 
+ 
+h2{
+  font-family: chicle;
+  color:#2b3e34 ;
+  font-size: 5rem;
+  z-index:11;
+}
+
+
+/*
+    
+██       ██████   ██████   ██████  
+██      ██    ██ ██       ██    ██ 
+██      ██    ██ ██   ███ ██    ██ 
+██      ██    ██ ██    ██ ██    ██ 
+███████  ██████   ██████   ██████  sert à place le logo de manière fixe                                  
+*/
+
+.logo {
+    position: fixed;
+    width:20vw;
+    height:25vw;
+    max-width: 150px;
+    top: 1vw;
+    left:1vw;
+    z-index: 11;
+}
+.logo img{
+  width:100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.logo img:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/*
+███    ███ ███████ ███    ██ ██    ██ 
+████  ████ ██      ████   ██ ██    ██ 
+██ ████ ██ █████   ██ ██  ██ ██    ██ 
+██  ██  ██ ██      ██  ██ ██ ██    ██ 
+██      ██ ███████ ██   ████  ██████  
+*/
+
+.menu-page{
+    position: relative;
+    width: 100vw;
+}
+
+
+.menu-apropos{
+    position:absolute;
+}
+.menu-apropos img{
+    width: 100%;
+    transition: transform 0.3s ease; /*transition smooth*/
+}
+.menu-apropos img:hover{ /*hoever = passer la souris sur l'item*/
+    transform: scale(1.03); /*agrandit l'item*/
+    cursor: pointer;
+}
+
+
+
+.menu-architrans{
+    position:absolute;
+}
+.menu-architrans img{
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.menu-architrans img:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+
+.menu-comu{
+    position:absolute;
+}
+.menu-comu img{
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.menu-comu img:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+
+.menu-photo{
+    position:absolute;
+}
+.menu-photo img{
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.menu-photo img:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+
+.menu-contact{
+    position:absolute;
+}
+.menu-contact img{
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.menu-contact img:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+  
+
+/* 
+ █████      ██████  ██████   ██████  ██████   ██████  ███████ 
+██   ██     ██   ██ ██   ██ ██    ██ ██   ██ ██    ██ ██      
+███████     ██████  ██████  ██    ██ ██████  ██    ██ ███████ 
+██   ██     ██      ██   ██ ██    ██ ██      ██    ██      ██ 
+██   ██     ██      ██   ██  ██████  ██       ██████  ███████*/
+
+.apropos{
+    align-items: center;
+    position: relative;
+    padding-bottom: 8vw;
+    display: flex;
+    justify-content: center;
+}
+
+.apropos-container{
+    width: 95%;
+}
+
+.apropos-container h2{
+    position : absolute;
+
+}
+
+.apropos-content{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+}
+
+.apropos-content img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.apropos-texte{
+    position: absolute;
+    font-family: Unna;
+    z-index:11;
+
+}
+
+/*
+
+ ██████  █████  ██████  ██████   ██████  ██    ██ ███████ ███████ ██      ███████ 
+██      ██   ██ ██   ██ ██   ██ ██    ██ ██    ██ ██      ██      ██      ██      
+██      ███████ ██████  ██████  ██    ██ ██    ██ ███████ █████   ██      ███████ 
+██      ██   ██ ██   ██ ██   ██ ██    ██ ██    ██      ██ ██      ██           ██ 
+ ██████ ██   ██ ██   ██ ██   ██  ██████   ██████  ███████ ███████ ███████ ███████  
+ réglages généraux des carrousels sans les tailles et autres paramètres qui seront dans le responsive
+                                                                                                                                                                                                                                         
+*/
+.architrans {
+    position: relative;
+    max-width: 80%; /* prend 80% de ma page */
+    margin: 3rem auto; /* centrer le carrousel dans la section */
+    overflow: hidden; /* cache les autres images que celle présentée */
+    padding-bottom: 1vw; /* laisse de l'espace sous l'item */ 
+
+}
+.architrans h2 {
+    margin: 1rem;
+    text-align: right;
+}
+
+.comu {
+    position: relative;
+    max-width: 80%; 
+    margin: 3rem auto; 
+    overflow: hidden; 
+    padding-bottom: 8vw;
+
+}
+.comu h2 {
+    margin:1rem;
+    text-align: right;
+}
+.photo {
+    position: relative;
+    max-width: 80%; 
+    margin: 3rem auto; 
+    overflow: hidden; 
+    padding-bottom: 8vw;
+
+}
+.photo h2 {
+    margin:1rem;
+    text-align: right;
+}
+.carousel-container{
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* transition douce entre les images */
+
+}
+.carousel-item{
+    box-sizing: border-box; /* empeche le padding de coller les bords */
+    text-align: center;
+    padding: 1rem;
+
+}
+.carousel-item img {
+    max-width: 95%; /* Make the image span the full width of the item */
+    max-height: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 8px;
+    
+}
+/* flèches carrousel */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 5; /*Je place les flèches au dessus du carrousel dans les layers*/
+}
+
+.carousel-arrow.left {
+    left: 1rem;
+}
+
+.carousel-arrow.right {
+    right: 1rem;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/*
+ ██████  ██████  ███    ██ ████████  █████   ██████ ████████ 
+██      ██    ██ ████   ██    ██    ██   ██ ██         ██    
+██      ██    ██ ██ ██  ██    ██    ███████ ██         ██    
+██      ██    ██ ██  ██ ██    ██    ██   ██ ██         ██    
+ ██████  ██████  ██   ████    ██    ██   ██  ██████    ██   */
+
+
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contact-box{
+    position:relative;
+    width:100vw;
+    display: flex;
+}
+.contact-box h2{
+    position:absolute;
+    text-align: right;
+}
+.contact-box img{
+    width:100vw;
+}
+
+
+.socialbutton_insta{
+    position: absolute;
+    width:8vw;
+}
+.socialbutton_insta img{
+    width:100%;
+    transition: transform 0.3s ease;
+}
+.socialbutton_insta img:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+.socialbutton_linkedin{
+    position: absolute;
+    width:8vw;
+}
+.socialbutton_linkedin img{
+    width:100%;
+    transition: transform 0.3s ease;
+}
+.socialbutton_linkedin img:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+.socialbutton_twitch{
+    position: absolute;
+    width:8vw;   
+}
+.socialbutton_twitch img{
+    width:100%;
+    transition: transform 0.3s ease;
+}
+.socialbutton_twitch img:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+.socialbutton_ytb{
+    position: absolute;
+    width:8vw;
+}
+.socialbutton_ytb img{
+    width:100%;
+    transition: transform 0.3s ease;
+}
+.socialbutton_ytb img:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+/*
+
+██████  ███████  ██████  ██████  
+██   ██ ██      ██      ██    ██ 
+██   ██ █████   ██      ██    ██ 
+██   ██ ██      ██      ██    ██ 
+██████  ███████  ██████  ██████  
+                                                             
+*/
+.deco-menu{
+    background-color: blue;
+}
+
+.deco-menu-gauche{
+    position: absolute;
+    width:40vw;
+    left: -8vw;
+
+}
+.deco-menu-gauche img{
+    width: 100%;
+}
+
+.deco-menu-droite{
+    position: absolute;
+    width: 45vw;
+    left: 55vw;
+    top: -10vw;
+}
+.deco-menu-droite img{
+    width: 100%;
+}
+
+
+
+.transition{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height:10vw;
+    z-index:-2;
+}
+
+.decotransi1 img{
+   width:100vw;
+}
+.decotransi2 img{
+    width:80vw;
+ }
+ .decotransi3 img{
+    width:60vw;
+ }
+
+/*
+
+██████  ███████ ███████ ██████   ██████  ███    ██ ███████ ██ ██    ██ ███████ 
+██   ██ ██      ██      ██   ██ ██    ██ ████   ██ ██      ██ ██    ██ ██      
+██████  █████   ███████ ██████  ██    ██ ██ ██  ██ ███████ ██ ██    ██ █████   
+██   ██ ██           ██ ██      ██    ██ ██  ██ ██      ██ ██  ██  ██  ██      
+██   ██ ███████ ███████ ██       ██████  ██   ████ ███████ ██   ████   ███████ 
+                                                                               
+                                                                               
+*/
+.imgpc,
+.imgtablet,
+.imgphone{
+    display: none;
+}
+/*phone
+██████  ██   ██  ██████  ███    ██ ███████ 
+██   ██ ██   ██ ██    ██ ████   ██ ██      
+██████  ███████ ██    ██ ██ ██  ██ █████   
+██      ██   ██ ██    ██ ██  ██ ██ ██      
+██      ██   ██  ██████  ██   ████ ███████
+*/
+@media (max-width: 500px){
+
+    /*menu*/
+    .menu-page{
+        padding-bottom: 185vw;
+    }
+    .menu-apropos{
+        width: 58vw;
+        height:63vw;
+        top: 1vw;
+        left: 8vw;
+    }
+    .menu-architrans{
+        width: 85vw;
+        height: 65vw;
+        left: 8vw;
+        top: 42vw;
+    }
+    .menu-comu{
+        width: 80vw;
+        height: 65vw;
+        top: 113vw;
+        left: 16vw;
+    }
+    .menu-photo{
+        width: 70vw;
+        height: 56vw;
+        top: 95vw;
+        left: 8vw;
+    }
+    .menu-contact{
+        width: 31vw;
+        height: 40vw;
+        left: 64vw;
+        top: 4vw;
+    }
+
+
+
+
+    /*section à propos*/
+    .apropos {
+        padding-bottom: 0vw;
+    }
+    .apropos-container {
+        min-height: 100vw;
+        
+    }
+    .apropos-content {
+        min-height: 100vw;
+
+    }
+    .apropos-container h2{
+        top:-7%;
+        right:10%;
+        font-size: 2rem;
+    }
+    .apropos-texte{
+        width:50%;
+        right: 2%;
+        top: 10%;
+    }
+    .apropos-texte p{
+        font-size: 0.8rem;
+    }
+    .apropos-content img{
+        position:absolute;
+        top:15vw;
+        width: 45%;
+        left: 2vw;
+    }
+    
+    /*carousels*/
+    .carousel-container{
+        height: 100vw; /* Hauteur du carrousel */
+    }
+    .carousel-item {
+        flex: 0 0 100%; /*une seule image est montrée*/
+    }
+
+    .architrans h2{
+        font-size: 2rem;
+    }
+    .comu h2{
+        font-size: 2rem;
+    }
+    .photo h2{
+        font-size: 2rem;
+    }
+    
+    /* contact*/
+    .contact-box h2{
+        font-size: 2rem;
+        left: 70vw;
+        top: -10vw ;
+    }
+    .socialbutton_insta{
+        left:38vw;
+        top: 7vw;
+        
+    }
+    .socialbutton_linkedin{
+        left:30vw;
+        top:18vw;
+
+    }
+    .socialbutton_twitch{
+        left:52vw;
+        top:20vw;
+    }
+    .socialbutton_ytb{
+        left:40vw;
+        top:30vw;
+    }    
+
+    
+
+
+
+    /*imgs*/
+    .imgphone { /*montre les images du telephone*/
+        display:block;
+    }
+    .imgtablet { /*cache les images de la tablet*/
+        display:none;
+    }
+    .imgpc { /*cache les images du pc*/
+        display:none;
+    }
+}
+    
+
+
+
+
+
+
+/*tablet
+
+████████  █████  ██████  ██      ███████ ████████ 
+   ██    ██   ██ ██   ██ ██      ██         ██    
+   ██    ███████ ██████  ██      █████      ██    
+   ██    ██   ██ ██   ██ ██      ██         ██    
+   ██    ██   ██ ██████  ███████ ███████    ██                                                   
+*/
+@media (min-width:501px) and (max-width: 1000px){
+
+
+    /*menu*/
+    .menu-page{
+        padding-bottom: 137vw;
+    }
+    .menu-apropos{
+        width: 48vw;
+        height:55vw;
+        top: 5vw;
+        left: 6vw;
+    }
+    .menu-architrans{
+        width: 65vw;
+        height: 40vw;
+        left: 30vw;
+        top: 92vw;
+    }
+    .menu-comu{
+        width: 40vw;
+        height: 41vw;
+        top: 42vw;
+        left: 50vw;
+    }
+    .menu-photo{
+        width: 50vw;
+        height: 50vw;
+        top: 55vw;
+        left: 1vw;
+    }
+    .menu-contact{
+        width: 31vw;
+        height: 38vw;
+        left: 57vw;
+        top: 4vw;
+    }
+
+
+    /*section à propos*/
+    .apropos {
+        padding-bottom: 5vw;
+    }
+    .apropos-container {
+        min-height: 100vw;
+    }
+    .apropos-content {
+        min-height: 100vw;
+    }
+    .apropos-container h2{
+        top:0.1%;
+        right:10%;
+        font-size: 3rem;
+    }
+    .apropos-texte{
+        width:50%;
+        right: 2%;
+        top: 17%;
+    }
+    .apropos-texte p{
+        font-size: 3vw;
+    }
+    .apropos-content img{
+        position:absolute;
+        top:15vw;
+        width: 45%;
+        left: 2vw;
+    }
+
+    
+    /*carousels*/
+    .carousel-container{
+        height: 32vh; /* Hauteur du carrousel */
+    }
+    .carousel-item {
+        flex: 0 0 50%; /*2 images montrées*/
+    }
+
+    .architrans h2{
+        font-size: 2rem;
+    }
+    .comu h2{
+        font-size: 2rem;
+    }
+    .photo h2{
+        font-size: 2rem;
+    }
+
+    /* contact*/
+    .contact-box h2{
+        font-size: 3rem;
+        left: 75vw;
+        top: -5vw ;
+    }
+
+    .socialbutton_insta{
+        left:38vw;
+        top: 7vw;
+        
+    }
+    .socialbutton_linkedin{
+        left:30vw;
+        top:18vw;
+
+    }
+    .socialbutton_twitch{
+        left:52vw;
+        top:20vw;
+    }
+    .socialbutton_ytb{
+        left:40vw;
+        top:30vw;
+    }
+
+
+
+    .imgphone { /*montre les images du telephone*/
+        display:none;
+    }
+    .imgtablet { /*cache les images de la tablet*/
+        display:block;
+    }
+    .imgpc { /*cache les images du pc*/
+        display:none;
+    }
+}
+
+
+
+
+
+
+
+/*pc
+
+██████   ██████ 
+██   ██ ██      
+██████  ██      
+██      ██      
+██       ██████ 
+*/
+@media (min-width: 1001px){
+
+    /*menu*/
+    .menu-page{
+        padding-bottom: 50vw;
+    }
+    .menu-apropos{
+        width: 25vw;
+        height:27vw;
+        top: 15vw;
+        left: 12vw;
+    }
+    .menu-architrans{
+        width: 40vw;
+        height: 25vw;
+        left: 28vw;
+        top: 25vw;
+    }
+    .menu-comu{
+        width: 25vw;
+        height: 30vw;
+        top: 0.2vw;
+        left: 32vw;
+    }
+    .menu-photo{
+        width: 29vw;
+        height: 29vw;
+        top: 15vw;
+        left: 68vw;
+    }
+    .menu-contact{
+        width: 20vw;
+        height: 23vw;
+        left: 70vw;
+        top: -7vw;
+    }
+
+
+    /*section à propos*/
+    .apropos {
+        padding-bottom: 5vw;
+    }
+    .apropos-container {
+        min-height: 50vw;
+    }
+    .apropos-content {
+        min-height: 50vw;
+    }
+    .apropos-container h2 {
+        right: 8vw;
+        top:7vw;
+    }
+    .apropos-texte{
+        width:30vw;
+        right: 15vw;
+        top:18vw;
+    }
+    .apropos-texte p{
+        font-size: 1.5vw;
+    }
+    .apropos-content img{
+        position:absolute;
+        top:5vw;
+        width: 55%;
+        left: 2vw;
+    }
+   
+    
+    
+    /*carousels*/
+    .carousel-container{
+        height: 50vh; 
+    }
+    .carousel-item {
+        flex: 0 0 50%; /*2 images montrées*/
+    }
+
+    /* contact*/
+    .contact-box h2{
+        width:80%;
+        margin:1rem;
+    }
+
+    .socialbutton_insta{
+        left:38vw;
+        top: 7vw;
+        
+    }
+    .socialbutton_linkedin{
+        left:30vw;
+        top:18vw;
+
+    }
+    .socialbutton_twitch{
+        left:52vw;
+        top:20vw;
+    }
+    .socialbutton_ytb{
+        left:40vw;
+        top:30vw;
+    }
+
+
+
+
+    .imgphone { /*montre les images du telephone*/
+        display:none;
+    }
+    .imgtablet { /*cache les images de la tablet*/
+        display:none;
+    }
+    .imgpc { /*cache les images du pc*/
+        display:block;
+    }
+
+    .decotransi1{
+        display: flex;
+        align-items: center;
+    }
+    .decotransi1 img{
+        width:80vw;
+    }
+
+    
+}
