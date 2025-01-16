@@ -366,6 +366,7 @@ h2{
     position: absolute;
     width:40vw;
     left: -8vw;
+    z-index: -5;
 
 }
 .deco-menu-gauche img{
@@ -377,6 +378,7 @@ h2{
     width: 45vw;
     left: 55vw;
     top: -10vw;
+    z-index: -5;
 }
 .deco-menu-droite img{
     width: 100%;
